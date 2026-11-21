@@ -6,7 +6,7 @@ const client = new MongoClient(URI);
 
 const dbName = "test";
 
-async function main() {
+const connectDb= async ()=> {
     try {
         // 1. Connect to MongoDB Atlas
         await client.connect();
@@ -48,5 +48,6 @@ async function main() {
         console.log("Connection closed.");
     }
 }
+module.exports = connectDb;
 
-main();
+
