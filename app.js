@@ -6,16 +6,12 @@ app.get("/",(req,res)=>{
     res.send("hellow server ")
 
 })
-
-
-connectDb()
-.then(()=>{
-    console.log("database connected successfully")
+async function startServer(){
+    await connectDb()
     app.listen(3000,()=>{
-        console.log("server is running on port 3000")
+        console.log("server is runnig on port 3000")
     })
-})
-.catch((err)=>{
-    console.log("error while connectiing to database",err)
-})
+}
 
+
+startServer()
