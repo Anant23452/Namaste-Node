@@ -1,0 +1,1 @@
+//wring schema for mongoose 
